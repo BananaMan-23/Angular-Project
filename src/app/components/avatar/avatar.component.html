@@ -3,6 +3,7 @@
     <h2 class="popup__title">Обновить аватар</h2>
     <form class="popup__form" name="popup_avatar" novalidate>
       <input
+        [(ngModel)]="avatar"
         name="link"
         type="url"
         class="popup__input popup__input_place_url popup__input_type_error"
