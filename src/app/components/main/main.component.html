@@ -1,158 +1,41 @@
 <main class="main">
   <section class="profile">
     <div class="profile__avatar-wrapper">
-      <img
-        [src]="url"
-        src="#"
-        alt="Изображение профиля"
-        class="profile__avatar"
-      />
+      <img [src]="url" alt="Изображение профиля" class="profile__avatar" />
       <button
+        (click)="openAvatar()"
         type="button"
         class="profile__avatar-edit-button"
-        (click)="openPopupAvatar()"
       ></button>
     </div>
     <div class="profile__container">
       <div class="profile__container-info">
         <h1 class="profile__container-title">{{ name }}</h1>
-        <button
-          class="profile__container-edit"
-          type="button"
-          (click)="openPopup()"
-        ></button>
+        <button (click)="openUserInfo()" class="profile__container-edit" type="button"></button>
       </div>
       <p class="profile__container-subtitle">{{ about }}</p>
     </div>
     <button
       class="profile__container-add"
       type="button"
-      (click)="openPopupCardAdd()"
+      (click)="openCard()"
     ></button>
   </section>
   <section class="elements">
-    <div *ngFor="let list of item" class="element">
+    <div class="element">
       <button class="element__trash" type="button"></button>
-      <img [src]="list.image" class="element__image" src="#" alt="картинка"/>
+      <img src="../../../assets/images/dombai.png" class="element__image" alt="картинка" />
       <div class="element__group">
-        <h2 class="element__group-subtitle">{{list.title}}</h2>
+        <h2 class="element__group-subtitle">{{title}}</h2>
         <div class="elements__like-wrapper">
-          <button (click)="likeEvent()" class="element__group-like" type="button"></button>
+          <button
+            (click)="likeEvent()"
+            class="element__group-like"
+            type="button"
+          ></button>
           <span class="elements__like-count"></span>
         </div>
       </div>
     </div>
   </section>
 </main>
-<section class="popup popup_open-edit">
-  <div class="popup__container">
-    <h3 class="popup__title">Редактировать профиль</h3>
-    <form class="popup__form" name="popup_profile" novalidate>
-      <input
-        [(ngModel)]="name"
-        id="name-input"
-        type="text"
-        placeholder="Имя"
-        class="popup__input"
-        name="name"
-        minlength="2"
-        maxlength="40"
-        value=""
-        required
-      />
-      <span id="name-input-error" class="popup__input-error"></span>
-      <input
-        [(ngModel)]="about"
-        id="info-input"
-        type="text"
-        placeholder="О себе"
-        class="popup__input"
-        name="info"
-        minlength="2"
-        maxlength="200"
-        value=""
-        required
-      />
-      <span id="info-input-error" class="popup__input-error"></span>
-      <button
-        class="popup__button"
-        type="submit"
-        (click)="userInfo(name, about)"
-      >
-        Сохранить
-      </button>
-    </form>
-    <button
-      #inActive
-      class="popup__close"
-      type="button"
-      (click)="closePopup()"
-    ></button>
-  </div>
-</section>
-<section class="popup popup_card-add">
-  <div class="popup__container popup__overlay">
-    <h2 class="popup__title">Новое место</h2>
-    <form class="popup__form" name="popup_adding" novalidate>
-      <input
-      [(ngModel)]="ttl"
-        name="name"
-        type="text"
-        class="popup__input popup__input_place_name popup__input_type_error"
-        id="placeName-input"
-        placeholder="Название"
-        minlength="2"
-        maxlength="30"
-        required
-      />
-      <span id="placeName-input-error" class="popup__input-error"></span>
-      <input
-      [(ngModel)]="img"
-        name="link"
-        type="url"
-        class="popup__input popup__input_place_url popup__input_type_error"
-        id="placeUrl-input"
-        placeholder="Ссылка на картинку"
-        required
-      />
-      <span id="placeUrl-input-error" class="popup__input-error"></span>
-      <button (click)="addCard()" type="submit" class="popup__button popup__add-card">
-        Создать
-      </button>
-    </form>
-    <button
-      type="button"
-      class="popup__close"
-      (click)="closePopupCardAdd()"
-    ></button>
-  </div>
-</section>
-<section class="popup popup_avatar">
-  <div class="popup__container popup__avatar">
-    <h2 class="popup__title">Обновить аватар</h2>
-    <form class="popup__form" name="popup_avatar" novalidate>
-      <input
-        [(ngModel)]="avatar"
-        name="link"
-        type="url"
-        class="popup__input popup__input_place_url popup__input_type_error"
-        id="placeAvatar-input"
-        placeholder="Ссылка на картинку"
-        required
-      />
-      <span id="placeAvatar-input-error" class="popup__input-error"></span>
-      <button
-        (click)="updateAvatar()"
-        type="submit"
-        class="popup__button popup__add-avatar"
-      >
-        Сохранить
-      </button>
-    </form>
-    <button
-      type="button"
-      class="popup__close"
-      (click)="closePopupAvatar()"
-    ></button>
-  </div>
-</section>

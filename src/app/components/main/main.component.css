@@ -7,20 +7,20 @@
 }
 @media screen and (max-width: 1024px) {
   .profile {
-      justify-content: space-around;
+    justify-content: space-around;
   }
 }
 @media screen and (max-width: 768px) {
   .profile {
-      max-width: 660px;
-      flex-direction: column;
-      align-items: center;
+    max-width: 660px;
+    flex-direction: column;
+    align-items: center;
   }
 }
 @media screen and (max-width: 320px) {
   .profile {
-      max-width: 282px;
-      margin: 42px 14px 36px;
+    max-width: 282px;
+    margin: 42px 14px 36px;
   }
 }
 .profile__avatar-wrapper {
@@ -42,9 +42,9 @@
 }
 @media screen and (max-width: 768px) {
   .profile__avatar {
-      margin-bottom: 15px;
-      max-width: 117px;
-      height: 125px;
+    margin-bottom: 15px;
+    max-width: 117px;
+    height: 125px;
   }
 }
 .profile__avatar-edit-button {
@@ -57,13 +57,13 @@
   object-fit: cover;
   background-color: transparent;
   border: none;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .profile__avatar-edit-button:hover {
   cursor: pointer;
-  background-color: rgba(0, 0, 0, .8);
-  background-image: url('../../../assets/images/edit-button.svg');
+  background-color: rgba(0, 0, 0, 0.8);
+  background-image: url("../../../assets/images/edit-button.svg");
   background-size: 26px;
   background-position: center;
   background-repeat: no-repeat;
@@ -78,16 +78,16 @@
 }
 @media screen and (max-width: 1024px) {
   .profile__container {
-      max-width: 380px;
-      margin-right: 16px;
+    max-width: 380px;
+    margin-right: 16px;
   }
 }
 @media screen and (max-width: 768px) {
   .profile__container {
-      align-items: center;
-      margin-bottom: 27px;
-      margin-right: 0;
-      margin-left: 0;
+    align-items: center;
+    margin-bottom: 27px;
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 .profile__container-info {
@@ -100,13 +100,13 @@
 }
 @media screen and (max-width: 768px) {
   .profile__container-info {
-      justify-content: center;
-      max-width: 300px;
+    justify-content: center;
+    max-width: 300px;
   }
 }
 @media screen and (max-width: 320px) {
   .profile__container-info {
-      max-width: 275px;
+    max-width: 275px;
   }
 }
 .profile__container-title {
@@ -121,11 +121,11 @@
 }
 @media screen and (max-width: 320px) {
   .profile__container-title {
-      font-weight: 500;
-      font-size: 27px;
-      text-align: center;
-      margin-right: 10px;
-      margin-bottom: 14px;
+    font-weight: 500;
+    font-size: 27px;
+    text-align: center;
+    margin-right: 10px;
+    margin-bottom: 14px;
   }
 }
 .profile__container-subtitle {
@@ -139,31 +139,31 @@
 }
 @media screen and (max-width: 320px) {
   .profile__container-subtitle {
-      font-weight: 400;
-      font-size: 14px;
-      text-align: center;
-      margin-top: -7px;
-      max-width: 270px;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    margin-top: -7px;
+    max-width: 270px;
   }
 }
 .profile__container-edit {
-  background-image: url('../../../assets/images/edit-button.svg');
+  background-image: url("../../../assets/images/edit-button.svg");
   background-color: #000;
   background-position: center;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   background-repeat: no-repeat;
   padding: 12px;
   margin-bottom: 24px;
-  transition: opacity .3s ease-in;
+  transition: opacity 0.3s ease-in;
 }
 .profile__container-edit:hover {
   cursor: pointer;
-  opacity: .6;
+  opacity: 0.6;
 }
 @media screen and (max-width: 320px) {
   .profile__container-edit {
-     padding: 8px;
-     background-image: url(../../../assets/images/Vector-320px.svg);
+    padding: 8px;
+    background-image: url(../../../assets/images/Vector-320px.svg);
   }
 }
 .profile__container-add {
@@ -172,26 +172,26 @@
   background-image: url(../../../assets/images/add-button.svg);
   background-color: #000;
   background-repeat: no-repeat;
-  border: 2px solid #FFFFFF;
+  border: 2px solid #ffffff;
   border-radius: 2px;
   background-position: center;
-  transition: opacity .3s ease-in;
+  transition: opacity 0.3s ease-in;
   margin-top: 7px;
 }
 .profile__container-add:hover {
   cursor: pointer;
-  opacity: .6;
+  opacity: 0.6;
 }
 @media screen and (max-width: 768px) {
   .profile__container-add {
-      width: 200px;
+    width: 200px;
   }
 }
 @media screen and (max-width: 320px) {
   .profile__container-add {
-      width: 282px;
-      padding: 23px;
-      background-image: url(../../../assets/images/Vector-plus-320px.svg);
+    width: 282px;
+    padding: 23px;
+    background-image: url(../../../assets/images/Vector-plus-320px.svg);
   }
 }
 .elements {
@@ -231,9 +231,9 @@
 }
 @media screen and (max-width: 767px) {
   .popup__container {
-      max-width: 280px;
-      padding: 25px 22px 25px 22px;
-      top: 14%;
+    max-width: 280px;
+    padding: 25px 22px 25px 22px;
+    top: 14%;
   }
 }
 .popup__close {
@@ -249,17 +249,17 @@
   background-repeat: no-repeat;
   width: 32px;
   height: 32px;
-  transition: opacity .3s ease-in;
+  transition: opacity 0.3s ease-in;
 }
 .popup__close:hover {
   cursor: pointer;
-  opacity: .6;
+  opacity: 0.6;
 }
 @media screen and (max-width: 767px) {
   .popup__close {
-      right: 0;
-      width: 20px;
-      height: 20px;
+    right: 0;
+    width: 20px;
+    height: 20px;
   }
 }
 .popup__button {
@@ -273,7 +273,7 @@
   font-size: 18px;
   text-align: center;
   width: 100%;
-  transition: background-color .3s ease-in;
+  transition: background-color 0.3s ease-in;
   box-sizing: border-box;
 }
 .popup__button:hover {
@@ -282,9 +282,9 @@
 }
 @media screen and (max-width: 320px) {
   .popup__button {
-      max-width: 280px;
-      font-size: 14px;
-      line-height: 17px;
+    max-width: 280px;
+    font-size: 14px;
+    line-height: 17px;
   }
 }
 .popup__input {
@@ -319,9 +319,9 @@
 }
 @media screen and (max-width: 767px) {
   .popup__container {
-      max-width: 280px;
-      padding: 25px 22px 25px 22px;
-      top: 14%;
+    max-width: 280px;
+    padding: 25px 22px 25px 22px;
+    top: 14%;
   }
 }
 .popup__title {
@@ -333,14 +333,14 @@
 }
 @media screen and (max-width: 320px) {
   .popup__title {
-      font-size: 18px;
-      line-height: 22px;
-      margin-bottom: 18px;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 18px;
   }
 }
 @media screen and (max-width: 320px) {
   .popup__title {
-      margin-bottom: 75px;
+    margin-bottom: 75px;
   }
 }
 .popup {
@@ -355,14 +355,12 @@
   left: 0;
   right: 0;
   top: 0;
-  background-color: rgba(0, 0, 0, .3);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 .popup_opened {
   visibility: visible;
   opacity: 1;
 }
-
-
 
 .element {
   max-width: 282px;
@@ -382,11 +380,11 @@
   position: absolute;
   top: 5%;
   left: 85%;
-  transition: opacity .2s ease-in;
+  transition: opacity 0.2s ease-in;
 }
 .element__trash:hover {
   cursor: pointer;
-  opacity: .6;
+  opacity: 0.6;
 }
 .elements__like-wrapper {
   display: flex;
@@ -403,7 +401,7 @@
   display: flex;
   max-width: 241px;
   justify-content: space-between;
-  align-items:center;
+  align-items: center;
   margin: 0 auto;
 }
 .element__group-subtitle {
@@ -423,7 +421,7 @@
   background-repeat: no-repeat;
   width: 22px;
   height: 19px;
-  transition: opacity .3s ease-in;
+  transition: opacity 0.3s ease-in;
   border: none;
   background-color: transparent;
 }
