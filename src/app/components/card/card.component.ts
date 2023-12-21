@@ -6,18 +6,21 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './card.component.html',
   styleUrl: './card.component.css'
 })
 export class CardComponent {
   constructor(
     public dialogRef: MatDialogRef<CardComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any,
+    @Inject(MAT_DIALOG_DATA) public data: {image: string; title: string},
   ) {}
 
   onNoClick(): void {
     this.dialogRef.close();
   }
 
+  addCard() {
+    this.dialogRef.close(this.data);
+  }
 }

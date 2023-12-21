@@ -22,11 +22,11 @@
     ></button>
   </section>
   <section class="elements">
-    <div class="element">
-      <button class="element__trash" type="button"></button>
-      <img src="../../../assets/images/dombai.png" class="element__image" alt="картинка" />
+    <div *ngFor="let list of lists" class="element">
+      <button (click)="deleteCard()" class="element__trash" type="button"></button>
+      <img [src]="list.image"  class="element__image" alt="картинка" />
       <div class="element__group">
-        <h2 class="element__group-subtitle">{{title}}</h2>
+        <h2 class="element__group-subtitle">{{list.title}}</h2>
         <div class="elements__like-wrapper">
           <button
             (click)="likeEvent()"

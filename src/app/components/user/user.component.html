@@ -3,30 +3,28 @@
     <h3 class="popup__title">Редактировать профиль</h3>
     <form class="popup__form" name="popup_profile" novalidate>
       <input
-        id="name-input"
+        [(ngModel)]="data.name"
         type="text"
         placeholder="Имя"
         class="popup__input"
         name="name"
         minlength="2"
         maxlength="40"
-        value=""
         required
       />
       <span id="name-input-error" class="popup__input-error"></span>
       <input
-        id="info-input"
+        [(ngModel)]="data.about"
         type="text"
         placeholder="О себе"
         class="popup__input"
         name="info"
         minlength="2"
         maxlength="200"
-        value=""
         required
       />
       <span id="info-input-error" class="popup__input-error"></span>
-      <button class="popup__button" type="submit">Сохранить</button>
+      <button (click)="updataUserInfo()" class="popup__button" type="submit">Сохранить</button>
     </form>
     <button (click)="onNoClick()" class="popup__close" type="button"></button>
   </div>

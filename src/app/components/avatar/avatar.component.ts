@@ -11,14 +11,17 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './avatar.component.css'
 })
 export class AvatarComponent {
-  avatar: string = ''
   constructor(
     public dialogRef: MatDialogRef<AvatarComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any,
+    @Inject(MAT_DIALOG_DATA) public data: {avatar: string},
   ) {}
 
   onNoClick(): void {
     this.dialogRef.close();
+  }
+
+  updateAvatar() {
+    this.dialogRef.close(this.data.avatar);
   }
 
 }

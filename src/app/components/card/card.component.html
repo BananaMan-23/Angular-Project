@@ -3,10 +3,10 @@
     <h2 class="popup__title">Новое место</h2>
     <form class="popup__form" name="popup_adding" novalidate>
       <input
+        [(ngModel)]="data.title"
         name="name"
         type="text"
         class="popup__input popup__input_place_name popup__input_type_error"
-        id="placeName-input"
         placeholder="Название"
         minlength="2"
         maxlength="30"
@@ -14,15 +14,19 @@
       />
       <span id="placeName-input-error" class="popup__input-error"></span>
       <input
+        [(ngModel)]="data.image"
         name="link"
         type="url"
         class="popup__input popup__input_place_url popup__input_type_error"
-        id="placeUrl-input"
         placeholder="Ссылка на картинку"
         required
       />
       <span id="placeUrl-input-error" class="popup__input-error"></span>
-      <button type="submit" class="popup__button popup__add-card">
+      <button
+        (click)="addCard()"
+        type="submit"
+        class="popup__button popup__add-card"
+      >
         Создать
       </button>
     </form>

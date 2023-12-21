@@ -21,28 +21,55 @@ import { UserComponent } from '../user/user.component';
   standalone: true,
 })
 export class MainComponent {
-  constructor(public dialog: MatDialog) {}
 
-  openAvatar(): void {
-    const dialogRef = this.dialog.open(AvatarComponent);
-  }
-
-  openCard(): void {
-    const dialogRef = this.dialog.open(CardComponent);
-  }
-
-  openUserInfo(): void {
-    const dialogRef = this.dialog.open(UserComponent);
-  }
+  lists = [
+    {
+      image: './../../assets/images/dombai.png',
+      title: 'Домбай',
+    }
+  ]
 
   name: string = 'Жак-ив-кусто';
   about: string = 'Первооткрыватель';
   url: string = '../../../assets/images/avatar.png';
-  title: string = 'Домбай'
+
+  constructor(public dialog: MatDialog) {}
+
+  openAvatar(): void {
+    const dialogRef = this.dialog.open(AvatarComponent, {
+      data: {avatar: ''}
+    });
+    dialogRef.afterClosed().subscribe(results => {
+      this.url = results
+    })
+  }
+
+  openCard(): void {
+    const dialogRef = this.dialog.open(CardComponent, {
+      data: {title: '', image: ''}
+    });
+    dialogRef.afterClosed().subscribe(results => {
+      this.lists.push({image: results.image, title: results.title})
+    })
+  }
+
+  openUserInfo(): void {
+    const dialogRef = this.dialog.open(UserComponent, {
+      data: {name: '', about: ''}
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      this.name = result.name;
+      this.about = result.about
+    })
+  }
 
   likeEvent() {
     const like = document.querySelector('.element__group-like')
     like?.classList.toggle('element__group-like_active')
+  }
+
+  deleteCard() {
+    this.lists.pop()
   }
 }
 
